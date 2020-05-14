@@ -13,8 +13,7 @@ function App() {
 		localStorage.setItem("dark", JSON.stringify(darkMode));
 	}, [darkMode]);
 
-	// getInitialMode를 const 이용해서 arrow function 으로 했을 때는 오류 떴음
-
+	// Question regarding 'getInitialMode' function; when I declare the function using arrow function, it causes an error.
 	function getInitialMode() {
 		const isReturningUser = "dark" in localStorage;
 		const savedMode = JSON.parse(localStorage.getItem("dark"));
